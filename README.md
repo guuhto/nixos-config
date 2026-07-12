@@ -1,10 +1,8 @@
 # NixOS Configuration
-
 Because reinstalling Arch for the 10th time got old.
 
 ## Structure
 
-\```
 nixos/
 ├── flake.nix                  # Inputs and structure
 ├── configuration.nix          # System entry point
@@ -28,33 +26,32 @@ nixos/
 │   ├── git.nix
 │   └── dotfiles.nix
 └── config/                    # App dotfiles
-    ├── fastfetch/
-    ├── kitty/
-    ├── zed/
-    ├── spotatui/
-    └── nnn/
-\```
+├── fastfetch/
+├── kitty/
+├── zed/
+├── spotatui/
+└── nnn/
 
 ## Installation on a new machine
 
 ### 1. Install NixOS normally and clone the repository
 
-\```bash
+```bash
 git clone https://github.com/guuhto/nixos-config ~/nixos
-\```
+```
 
 ### 2. Replace hardware-configuration.nix with the new machine's
 
-\```bash
+```bash
 sudo nixos-generate-config --show-hardware-config > ~/nixos/hardware-configuration.nix
-\```
+```
 
 ### 3. Apply the configuration
 
-\```bash
+```bash
 cd ~/nixos
 sudo nixos-rebuild switch --flake .#gustavo-nixos
-\```
+```
 
 ### 4. Install third-party themes manually via KDE Store
 
@@ -65,24 +62,24 @@ sudo nixos-rebuild switch --flake .#gustavo-nixos
 
 ### 5. Set up Rust toolchain
 
-\```bash
+```bash
 rustup default stable
-\```
+```
 
 ## Updating configuration
 
-\```bash
+```bash
 cd ~/nixos
 sudo nixos-rebuild switch --flake .#gustavo-nixos
 git add .
 git commit -m "describe your change"
 git push
-\```
+```
 
 ## Updating packages
 
-\```bash
+```bash
 cd ~/nixos
 nix flake update
 sudo nixos-rebuild switch --flake .#gustavo-nixos
-\```
+```
