@@ -19,8 +19,8 @@
 
     # Terminais
     warp-terminal
-    kitty
-
+    kitty   
+ 
     # Development
     # Tools
     git
