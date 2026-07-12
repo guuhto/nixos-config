@@ -7,30 +7,31 @@ nixos/
 ├── flake.nix                  # Inputs and structure
 ├── configuration.nix          # System entry point
 ├── hardware-configuration.nix # Machine-specific hardware
+├── p10k.zsh                   # Powerlevel10k config
 ├── modules/                   # System modules
-│   ├── boot.nix
-│   ├── network.nix
-│   ├── desktop.nix
 │   ├── audio.nix
 │   ├── bluetooth.nix
+│   ├── boot.nix
+│   ├── desktop.nix
 │   ├── flatpak.nix
-│   ├── programs.nix
 │   ├── fonts.nix
+│   ├── network.nix
+│   ├── programs.nix
 │   └── users.nix
 ├── home/                      # User configuration (Home Manager)
 │   ├── default.nix
-│   ├── packages.nix
-│   ├── zsh.nix
-│   ├── variables.nix
-│   ├── plasma.nix
+│   ├── dotfiles.nix
 │   ├── git.nix
-│   └── dotfiles.nix
+│   ├── packages.nix
+│   ├── plasma.nix
+│   ├── variables.nix
+│   └── zsh.nix
 └── config/                    # App dotfiles
-├── fastfetch/
-├── kitty/
-├── zed/
-├── spotatui/
-└── nnn/
+    ├── fastfetch/
+    ├── kitty/
+    ├── nnn/
+    ├── spotatui/
+    └── zed/
 ```
 ## Installation on a new machine
 
