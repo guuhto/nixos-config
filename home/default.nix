@@ -1,12 +1,12 @@
 { config, pkgs, ... }:
 {
   imports = [
+    ./dotfiles.nix
     ./git.nix
     ./packages.nix
     ./plasma.nix
     ./variables.nix
-    ./zsh.nix
-    
+    ./zsh.nix 
   ];
 
   home.username = "gustavo";
