@@ -2,7 +2,7 @@
 Because reinstalling Arch for the 10th time got old.
 
 ## Structure
-
+```
 nixos/
 ├── flake.nix                  # Inputs and structure
 ├── configuration.nix          # System entry point
@@ -31,7 +31,7 @@ nixos/
 ├── zed/
 ├── spotatui/
 └── nnn/
-
+```
 ## Installation on a new machine
 
 ### 1. Install NixOS normally and clone the repository
