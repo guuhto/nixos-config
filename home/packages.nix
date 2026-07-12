@@ -57,7 +57,7 @@
     # Cloud
     megasync
     nextcloud-client
-
+    
     # App Center
     bazaar
   ];
