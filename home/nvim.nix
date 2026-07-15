@@ -19,6 +19,13 @@
       set smartcase
       set clipboard=unnamedplus
       set termguicolors
+
+      command! -bang Q q<bang>
+      command! -bang W w<bang>
+      command! -bang Wq wq<bang>
+      command! -bang WQ wq<bang>
+      command! -bang Qa qa<bang>
+      command! -bang QA qa<bang>
     '';
 
     plugins = with pkgs.vimPlugins; [
@@ -41,7 +48,12 @@
     ];
 
     initLua = ''
-      vim.cmd.colorscheme("catppuccin")
+      vim.cmd.colorscheme("catppuccin") 
+
+      vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+      vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+      vim.api.nvim_set_hl(0, "NormalNC", { bg = "none" })
+
       require("lualine").setup()
       require("nvim-autopairs").setup()
       
