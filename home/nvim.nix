@@ -78,7 +78,18 @@
 
       local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
-      vim.lsp.config('nil_ls', {})
+      vim.lsp.config('nil_ls', {
+        capabilities = capabilities,
+        settings = {
+        ["nil"] = {
+          nix = {
+          flake = {
+            autoArchive = true,
+              },
+            },
+          },
+        },
+      })
       vim.lsp.enable('nil_ls')
 
       vim.keymap.set("n", "<C-p>", require("telescope.builtin").find_files)
