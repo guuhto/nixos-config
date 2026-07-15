@@ -16,6 +16,7 @@
     ./modules/network.nix
     ./modules/programs.nix
     ./modules/users.nix
+    ./modules/virtualization.nix
   ];
 
   nixpkgs.config.allowUnfree = true;
