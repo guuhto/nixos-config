@@ -1,11 +1,12 @@
 { ... }:
 {
   home.file = {
+    ".config/nnn/bookmarks".source = ../config/nnn/bookmarks;
     ".config/fastfetch".source = ../config/fastfetch;
     ".config/kitty".source = ../config/kitty;
+    ".config/nnn/plugins".source = ../config/nnn/plugins;
     ".p10k.zsh".source = ../p10k.zsh;
     ".config/spotatui".source = ../config/spotatui;
-    ".config/nnn".source = ../config/nnn;
     ".config/zed".source = ../config/zed;
   };
 }
