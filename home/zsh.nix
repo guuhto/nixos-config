@@ -6,8 +6,9 @@
     syntaxHighlighting.enable = true;
     enableCompletion = true;
     shellAliases = {
-      nnn = "nnn -P p";
       kate = "kate 2>/dev/null";
+      nnn = "nnn -P p";
+      zed = "zeditor";
     };
     initContent = ''
       fastfetch
