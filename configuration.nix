@@ -3,21 +3,21 @@
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
 { config, pkgs, spicetify-nix, ... }:
- 
+
 {
   imports = [
     ./hardware-configuration.nix
-    ./modules/boot.nix
-    ./modules/network.nix
-    ./modules/desktop.nix
     ./modules/audio.nix
     ./modules/bluetooth.nix
+    ./modules/boot.nix
+    ./modules/desktop.nix
     ./modules/flatpak.nix
-    ./modules/programs.nix
     ./modules/fonts.nix
+    ./modules/network.nix
+    ./modules/programs.nix
     ./modules/users.nix
   ];
-   
+
   nixpkgs.config.allowUnfree = true;
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   # This value determines the NixOS release from which the default

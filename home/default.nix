@@ -3,6 +3,7 @@
   imports = [
     ./dotfiles.nix
     ./git.nix
+    ./nvim.nix
     ./packages.nix
     ./plasma.nix
     ./variables.nix
