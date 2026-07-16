@@ -45,18 +45,42 @@
       lualine-nvim
 
       nvim-autopairs
+
+       nvim-autopairs
+       nvim-tree-lua
+       nvim-web-devicons
     ];
 
     initLua = ''
-      vim.cmd.colorscheme("catppuccin") 
+    vim.cmd.colorscheme("catppuccin")
+
+      vim.api.nvim_create_autocmd("ColorScheme", {
+        callback = function()
+        vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+        vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+        vim.api.nvim_set_hl(0, "NormalNC", { bg = "none" })
+        vim.api.nvim_set_hl(0, "NvimTreeNormal", { bg = "none" })
+        vim.api.nvim_set_hl(0, "NvimTreeNormalNC", { bg = "none" })
+        vim.api.nvim_set_hl(0, "NvimTreeEndOfBuffer", { bg = "none" })
+        vim.api.nvim_set_hl(0, "NvimTreeWinSeparator", { bg = "none" })
+       end,
+      })
 
       vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
       vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
       vim.api.nvim_set_hl(0, "NormalNC", { bg = "none" })
+      vim.api.nvim_set_hl(0, "NvimTreeNormal", { bg = "none" })
+      vim.api.nvim_set_hl(0, "NvimTreeNormalNC", { bg = "none" })
+      vim.api.nvim_set_hl(0, "NvimTreeEndOfBuffer", { bg = "none" })
+      vim.api.nvim_set_hl(0, "NvimTreeWinSeparator", { bg = "none" })
+      vim.keymap.set({ "n", "i" }, "<kEnter>", "<CR>")
 
       require("lualine").setup()
       require("nvim-autopairs").setup()
-      
+      require("nvim-tree").setup()
+
+      vim.keymap.set("n", "<C-b>", ":NvimTreeToggle<CR>")
+
       local cmp = require("cmp")
         cmp.setup({
         snippet = {
