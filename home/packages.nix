@@ -46,7 +46,8 @@
     # Music
     strawberry
     spotatui
-
+    spotifyd
+  
     # Communication
     discord
     zapzap

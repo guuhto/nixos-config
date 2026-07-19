@@ -6,8 +6,9 @@
     ./nvim.nix
     ./packages.nix
     ./plasma.nix
+    ./spotifyd.nix
     ./variables.nix
-    ./zsh.nix 
+    ./zsh.nix
   ];
 
   home.username = "gustavo";

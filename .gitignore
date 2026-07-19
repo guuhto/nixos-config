@@ -1,0 +1,3 @@
+config/spotatui/client.yml
+config/spotatui/.spotify_token_cache_*.json
+config/spotatui/streaming_cache/
