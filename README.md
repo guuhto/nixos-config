@@ -17,11 +17,13 @@ nixos/
 │   ├── fonts.nix
 │   ├── network.nix
 │   ├── programs.nix
-│   └── users.nix
+│   ├── users.nix
+│   └── virtualization.nix
 ├── home/                      # User configuration (Home Manager)
 │   ├── default.nix
 │   ├── dotfiles.nix
 │   ├── git.nix
+│   ├── nvim.nix
 │   ├── packages.nix
 │   ├── plasma.nix
 │   ├── variables.nix
@@ -30,7 +32,10 @@ nixos/
     ├── fastfetch/
     ├── kitty/
     ├── nnn/
+    │   ├── plugins/
+    │   └── bookmarks/
     ├── spotatui/
+    │   └── config.yml
     └── zed/
 ```
 ## Installation on a new machine
