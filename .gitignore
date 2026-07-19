@@ -1,3 +1,4 @@
 config/spotatui/client.yml
+config/spotatui/spotatui_panic.log
+config/spotatui/streaming_cache/credentials.json
 config/spotatui/.spotify_token_cache_*.json
-config/spotatui/streaming_cache/
