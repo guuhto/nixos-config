@@ -25,7 +25,6 @@
     # Tools
     git
     gh
-    vscodium
     # Language
     gcc
     python3
