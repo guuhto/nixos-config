@@ -29,7 +29,7 @@ nixos/
 │   ├── rust.nix
 │   ├── spotifyd.nix
 │   ├── variables.nix
-│   ├── zed/
+│   ├── zed/                   # Zed editor config (declarative)
 │   │   ├── default.nix
 │   │   ├── keymap.nix
 │   │   ├── tasks.nix
@@ -72,10 +72,10 @@ sudo nixos-rebuild switch --flake .#gustavo-nixos
 - GreyStone-circle (icons)
 - Future-dark Cursors (cursors)
 
-### 5. Set up Rust toolchain
+### 5. Authenticate spotifyd
 
 ```bash
-rustup default stable
+spotifyd authenticate
 ```
 
 ## Updating configuration
