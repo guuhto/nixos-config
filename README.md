@@ -26,9 +26,10 @@ nixos/
 │   ├── nvim.nix
 │   ├── packages.nix
 │   ├── plasma.nix
+│   ├── rust.nix
 │   ├── spotifyd.nix
 │   ├── variables.nix
-│   ├── zed/                   # Zed editor config (declarative)
+│   ├── zed/
 │   │   ├── default.nix
 │   │   ├── keymap.nix
 │   │   ├── tasks.nix

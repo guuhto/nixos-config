@@ -6,6 +6,7 @@
     ./nvim.nix
     ./packages.nix
     ./plasma.nix
+    ./rust.nix
     ./spotifyd.nix
     ./variables.nix
     ./zed/default.nix

@@ -1,51 +1,57 @@
-{ pkgs, ... }:
+{ pkgs, lib, ... }:
 {
   home.packages = with pkgs; [
-    # Minecraft
-    prismlauncher
-    jdk21
-
-    # Shell Utilities
-    fastfetch
-    zsh-powerlevel10k
-    nnn
-    bat
-    ueberzugpp
-    fzf
-    ffmpegthumbnailer
-    imagemagick
-    poppler-utils
-    mediainfo
-
-    # Terminais
-    warp-terminal
-    kitty   
- 
-    # Development
-    # Tools
+    # Development - Tools
     git
     gh
-    # Language
+
+    # Development - Languages
     gcc
+    go
     python3
     rustup
-    go    
-    
+
+    # Development - LSPs
+    clang-tools
+    gopls
+    pyright
+    (lib.hiPrio rust-analyzer)
+
+    # Gaming
+    jdk21
+    prismlauncher
+
+    # Shell Utilities
+    bat
+    fastfetch
+    ffmpegthumbnailer
+    fzf
+    imagemagick
+    mediainfo
+    nnn
+    poppler-utils
+    ueberzugpp
+    zsh-powerlevel10k
+
+    # Terminals
+    kitty
+    warp-terminal
+
     # Office
+    obsidian
+    onlyoffice-desktopeditors
     speedcrunch
     thunderbird
-    onlyoffice-desktopeditors
-    obsidian
 
     # Media
     gimp
     vlc
 
     # Music
-    strawberry
     spotatui
     spotifyd
-  
+    strawberry
+
     # Communication
     discord
     zapzap
@@ -56,7 +62,7 @@
     # Cloud
     megasync
     nextcloud-client
-    
+
     # App Center
     bazaar
   ];
