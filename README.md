@@ -26,7 +26,13 @@ nixos/
 │   ├── nvim.nix
 │   ├── packages.nix
 │   ├── plasma.nix
+│   ├── spotifyd.nix
 │   ├── variables.nix
+│   ├── zed/                   # Zed editor config (declarative)
+│   │   ├── default.nix
+│   │   ├── keymap.nix
+│   │   ├── tasks.nix
+│   │   └── theme.nix
 │   └── zsh.nix
 └── config/                    # App dotfiles
     ├── fastfetch/
@@ -34,9 +40,8 @@ nixos/
     ├── nnn/
     │   ├── plugins/
     │   └── bookmarks/
-    ├── spotatui/
-    │   └── config.yml
-    └── zed/
+    └── spotatui/
+        └── config.yml
 ```
 ## Installation on a new machine
 
