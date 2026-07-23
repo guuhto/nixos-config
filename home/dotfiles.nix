@@ -7,6 +7,5 @@
     ".config/nnn/plugins".source = ../config/nnn/plugins;
     ".p10k.zsh".source = ../p10k.zsh;
     ".config/spotatui/config.yml".source = ../config/spotatui/config.yml;
-    ".config/zed".source = ../config/zed;
   };
 }

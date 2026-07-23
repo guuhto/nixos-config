@@ -8,6 +8,7 @@
     ./plasma.nix
     ./spotifyd.nix
     ./variables.nix
+    ./zed/default.nix
     ./zsh.nix
   ];
 

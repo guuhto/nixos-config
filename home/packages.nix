@@ -26,7 +26,6 @@
     git
     gh
     vscodium
-    zed-editor
     # Language
     gcc
     python3
