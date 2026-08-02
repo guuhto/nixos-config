@@ -26,6 +26,7 @@
 
     # Shell Utilities
     bat
+    btop
     fastfetch
     ffmpegthumbnailer
     fzf
