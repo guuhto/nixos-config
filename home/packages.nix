@@ -50,7 +50,7 @@
     obsidian
     onlyoffice-desktopeditors
     libreoffice-qt
-    speedcrunch
+    qalculate-gtk
     thunderbird
 
     # Media
