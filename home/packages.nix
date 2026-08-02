@@ -17,6 +17,9 @@
     pyright
     (lib.hiPrio rust-analyzer)
 
+    # Claude
+    claude-code
+
     # Gaming
     jdk21
     prismlauncher
