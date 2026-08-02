@@ -33,6 +33,11 @@
     ueberzugpp
     zsh-powerlevel10k
 
+    # nnn Preview Dependencies
+    catdoc
+    pandoc
+    w3m
+
     # Terminals
     kitty
     warp-terminal
@@ -40,6 +45,7 @@
     # Office
     obsidian
     onlyoffice-desktopeditors
+    libreoffice-qt
     speedcrunch
     thunderbird
 
