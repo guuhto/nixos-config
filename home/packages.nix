@@ -27,14 +27,16 @@
     # Shell Utilities
     bat
     btop
+    chafa
+    eza
     fastfetch
+    ffmpeg
     ffmpegthumbnailer
     fzf
     imagemagick
     mediainfo
     nnn
     poppler-utils
-    ueberzugpp
     zsh-powerlevel10k
 
     # nnn Preview Dependencies
