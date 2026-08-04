@@ -64,7 +64,7 @@
 
     # Communication
     discord
-    zapzap
+    whatsie
 
     # Peripherals
     solaar
