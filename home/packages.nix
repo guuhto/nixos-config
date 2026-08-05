@@ -28,6 +28,7 @@
     bat
     btop
     chafa
+    colloid-icon-theme
     eza
     fastfetch
     ffmpeg
@@ -70,6 +71,7 @@
 
     # Peripherals
     solaar
+    sweet-nova
 
     # Cloud
     megasync

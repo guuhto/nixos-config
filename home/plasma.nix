@@ -4,8 +4,14 @@
     enable = true;
 
     workspace = {
-      lookAndFeel = "org.kde.breezedark.desktop";
-      widgetStyle = "Breeze";
+      colorScheme = "SweetAmbarBlue";
+      cursor.theme = "Future-dark-cursors";
+      iconTheme = "GreyStone - circle";
+      theme = "Sweet-Ambar-Blue";
+      windowDecorations = {
+        library = "org.kde.kwin.aurorae";
+        theme = "__aurorae__svg__Sweet-Dark-transparent";
+      };
     };
 
     kwin = {
