@@ -7,7 +7,7 @@ in
 {
   programs.zed-editor = {
     enable = true;
-    extensions = [ "nix" ] ++ theme.extensions;
+    extensions = [ "nix" "toml" ] ++ theme.extensions;
     userSettings = {
       icon_theme = "JetBrains New UI Icons (Dark)";
       vim_mode = true;
