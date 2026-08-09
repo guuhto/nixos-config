@@ -21,6 +21,7 @@ nixos/
 │   ├── users.nix
 │   └── virtualization.nix
 ├── home/                      # User configuration (Home Manager)
+│   ├── autostart.nix
 │   ├── default.nix
 │   ├── dotfiles.nix
 │   ├── git.nix
@@ -31,7 +32,8 @@ nixos/
 │   ├── spotifyd.nix
 │   ├── variables.nix
 │   ├── zed/                   # Zed editor config (declarative)
-│   │   ├── default.nix
+│   │   ├── autostart.nix
+│   ├── default.nix
 │   │   ├── keymap.nix
 │   │   ├── tasks.nix
 │   │   └── theme.nix
@@ -131,6 +133,7 @@ falls back to a plain background.
 |---|---|
 | Panel layout | `appletsrc.backup`, copied by hand |
 | Spotify OAuth | Token expires every 6 months |
+| MEGAsync / Nextcloud login | Autostart is declared, but each client needs a one-time sign-in |
 | Wallpapers | Live in MEGA, too large to vendor |
 | `virsh net-start default` | libvirt's default network isn't auto-started |
 
