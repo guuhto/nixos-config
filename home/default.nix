@@ -1,6 +1,7 @@
 { config, pkgs, ... }:
 {
   imports = [
+    ./autostart.nix
     ./dotfiles.nix
     ./git.nix
     ./nvim.nix
