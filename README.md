@@ -32,8 +32,7 @@ nixos/
 │   ├── spotifyd.nix
 │   ├── variables.nix
 │   ├── zed/                   # Zed editor config (declarative)
-│   │   ├── autostart.nix
-│   ├── default.nix
+│   │   ├── default.nix
 │   │   ├── keymap.nix
 │   │   ├── tasks.nix
 │   │   └── theme.nix
