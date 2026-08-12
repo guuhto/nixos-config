@@ -6,6 +6,7 @@
       After = [ "graphical-session.target" ];
     };
     Service = {
+      Environment = [ "QT_QPA_PLATFORMTHEME=kde" "QT_STYLE_OVERRIDE=Breeze" ];
       ExecStart = "${pkgs.megasync}/bin/megasync";
       Restart = "on-failure";
       RestartSec = 5;
@@ -19,6 +20,7 @@
       After = [ "graphical-session.target" ];
     };
     Service = {
+      Environment = [ "QT_QPA_PLATFORMTHEME=kde" "QT_STYLE_OVERRIDE=Breeze" ];
       ExecStart = "${pkgs.nextcloud-client}/bin/nextcloud";
       Restart = "on-failure";
       RestartSec = 5;
