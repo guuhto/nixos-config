@@ -7,6 +7,7 @@
     ".config/nnn/plugins".source = ../config/nnn/plugins;
     ".config/spotatui/config.yml".source = ../config/spotatui/config.yml;
     ".icons/Future-dark-cursors".source = ../config/plasma/cursors/Future-dark-cursors;
+    ".local/share/aurorae/themes/Sweet-Dark-transparent".source = ../config/plasma/aurorae/Sweet-Dark-transparent;
     ".local/share/color-schemes/SweetAmbarBlue.colors".source = ../config/plasma/color-schemes/SweetAmbarBlue.colors;
     ".local/share/icons/GreyStone-circle".source = ../config/plasma/icons/GreyStone-circle;
     ".local/share/plasma/desktoptheme/Sweet-Ambar-Blue".source = ../config/plasma/desktoptheme/Sweet-Ambar-Blue;
