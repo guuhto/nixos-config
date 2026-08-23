@@ -3,8 +3,13 @@
   networking.hostName = "gustavo-nixos";
   networking.networkmanager.enable = true;
 
-  time.timeZone = "America/Sao_Paulo";
+  networking.firewall = {
+    enable = true;
+    allowedTCPPorts = [ ];
+    allowedUDPPorts = [ ];
+  };
 
+  time.timeZone = "America/Sao_Paulo";
   i18n.defaultLocale = "pt_BR.UTF-8";
   i18n.extraLocaleSettings = {
     LC_ADDRESS = "pt_BR.UTF-8";
