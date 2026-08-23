@@ -9,11 +9,11 @@
     ./plasma.nix
     ./rust.nix
     ./spotifyd.nix
+    ./ssh.nix
     ./variables.nix
     ./zed/default.nix
     ./zsh.nix
   ];
-
   home.username = "gustavo";
   home.homeDirectory = "/home/gustavo";
   home.stateVersion = "25.11";

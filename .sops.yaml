@@ -1,7 +1,9 @@
 keys:
-  - &host age1e2ch6kyvuzvca33c3g7d7tyddqesqmj8qwhcqzzendrxl8wyyvxsmcdn5y
+  - &host    age1e2ch6kyvuzvca33c3g7d7tyddqesqmj8qwhcqzzendrxl8wyyvxsmcdn5y
+  - &gustavo age1s5th3k6453lp838n8vnl5pd8cpngw957ejxj2tc3w5yyzyy0ng0sh88v7v
 creation_rules:
-  - path_regex: secrets/[^/]+\.yaml$
+  - path_regex: ^secrets/
     key_groups:
       - age:
           - *host
+          - *gustavo
