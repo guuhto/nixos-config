@@ -15,6 +15,7 @@
     ./modules/fonts.nix
     ./modules/network.nix
     ./modules/programs.nix
+    ./modules/sops.nix
     ./modules/users.nix
     ./modules/virtualization.nix
   ];

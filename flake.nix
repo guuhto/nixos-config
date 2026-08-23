@@ -12,8 +12,12 @@
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.home-manager.follows = "home-manager";
     };
+    sops-nix = {
+      url = "github:Mic92/sops-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
-  outputs = { self, nixpkgs, spicetify-nix, home-manager, plasma-manager, ... }: {
+  outputs = { self, nixpkgs, spicetify-nix, home-manager, plasma-manager, sops-nix, ... }: {
     nixosConfigurations.gustavo-nixos =
       nixpkgs.lib.nixosSystem {
         specialArgs = {
@@ -23,6 +27,7 @@
           { nixpkgs.hostPlatform = "x86_64-linux"; }
           ./configuration.nix
           spicetify-nix.nixosModules.default
+          sops-nix.nixosModules.sops
           home-manager.nixosModules.home-manager
           {
             home-manager.useGlobalPkgs = true;
