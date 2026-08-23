@@ -11,6 +11,7 @@
     ./spotifyd.nix
     ./ssh.nix
     ./variables.nix
+    ./xdg.nix
     ./zed/default.nix
     ./zsh.nix
   ];
