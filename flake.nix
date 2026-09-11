@@ -16,8 +16,12 @@
       url = "github:Mic92/sops-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    openlogi = {
+      url = "github:AprilNEA/OpenLogi";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
-  outputs = { self, nixpkgs, spicetify-nix, home-manager, plasma-manager, sops-nix, ... }: {
+  outputs = { self, nixpkgs, spicetify-nix, home-manager, plasma-manager, sops-nix, openlogi, ... }: {
     nixosConfigurations.gustavo-nixos =
       nixpkgs.lib.nixosSystem {
         specialArgs = {
@@ -28,6 +32,7 @@
           ./configuration.nix
           spicetify-nix.nixosModules.default
           sops-nix.nixosModules.sops
+          openlogi.nixosModules.default
           home-manager.nixosModules.home-manager
           {
             home-manager.useGlobalPkgs = true;

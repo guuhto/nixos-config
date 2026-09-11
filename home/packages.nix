@@ -70,7 +70,6 @@
     whatsie
 
     # Peripherals
-    solaar
     sweet-nova
 
     # Cloud

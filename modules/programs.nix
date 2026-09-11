@@ -7,6 +7,7 @@ in
   programs.firefox.enable = true;
   programs.nix-ld.enable = true;
   programs.steam.enable = true;
+  programs.openlogi.enable = true;
 
   programs.spicetify = {
     enable = true;
