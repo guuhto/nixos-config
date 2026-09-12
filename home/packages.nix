@@ -25,6 +25,7 @@
     prismlauncher
 
     # Shell Utilities
+    age
     bat
     btop
     chafa
@@ -38,6 +39,7 @@
     mediainfo
     nnn
     poppler-utils
+    sops
     zsh-powerlevel10k
 
     # nnn Preview Dependencies
@@ -75,7 +77,8 @@
     # Cloud
     megasync
     nextcloud-client
- 
+    rclone  
+
     # Proton
     protonmail-desktop
     proton-pass

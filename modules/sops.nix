@@ -9,4 +9,11 @@
   };
 
   sops.secrets."gustavo-password".neededForUsers = true;
+  
+  sops.secrets."rclone.conf" = {
+    format = "binary";
+    sopsFile = ../secrets/rclone.conf;
+    owner = "gustavo";
+    mode = "0400";
+  };
 }

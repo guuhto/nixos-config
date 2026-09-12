@@ -27,4 +27,23 @@
     };
     Install.WantedBy = [ "graphical-session.target" ];
   };
+
+  systemd.user.services.protondrive = {
+    Unit = {
+      Description = "Proton Drive (rclone)";
+      After = [ "network-online.target" ];
+    };
+    Service = {
+      RuntimeDirectory = "rclone";
+      ExecStartPre = "${pkgs.coreutils}/bin/install -m600 /run/secrets/rclone.conf %t/rclone/rclone.conf";
+      ExecStart = ''
+        ${pkgs.rclone}/bin/rclone mount protondrive: %h/ProtonDrive \
+          --config %t/rclone/rclone.conf \
+          --vfs-cache-mode full
+      '';
+      ExecStop = "${pkgs.fuse3}/bin/fusermount3 -u %h/ProtonDrive";
+      Restart = "on-failure";
+    };
+    Install.WantedBy = [ "default.target" ];
+  };
 }
