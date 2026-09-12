@@ -41,13 +41,13 @@ DialogHeight=1021
 DialogWidth=952
 
 [Containments][1][Wallpaper][luisbocanegra.smart.video.wallpaper.reborn][General]
-LastVideo=file:///home/gustavo/MEGA/Images/Wallpapers/Live_Wallpapers/Reze_Bomb_Devil_2560x1440.mp4
+LastVideo=file:///home/gustavo/ProtonDrive/MEGA/Images/Wallpapers/Live_Wallpapers/Reze_Bomb_Devil_2560x1440.mp4
 LastVideoPosition=9816
 PauseMode=3
-VideoUrls=[{"filename":"file:///home/gustavo/MEGA/Images/Wallpapers/Live_Wallpapers/Reze_Bomb_Devil_2560x1440.mp4","enabled":true,"duration":0,"customDuration":0,"playbackRate":0,"alternativePlaybackRate":0,"loop":false}]
+VideoUrls=[{"filename":"file:///home/gustavo/ProtonDrive/MEGA/Images/Wallpapers/Live_Wallpapers/Reze_Bomb_Devil_2560x1440.mp4","enabled":true,"duration":0,"customDuration":0,"playbackRate":0,"alternativePlaybackRate":0,"loop":false}]
 
 [Containments][1][Wallpaper][org.kde.image][General]
-Image=file:///home/gustavo/MEGA/Images/Wallpapers/Static Wallpaper/Lain_Serial_Experiments_NixOS.png
+Image=file:///home/gustavo/ProtonDrive/MEGA/Images/Wallpapers/Static Wallpaper/Lain_Serial_Experiments_NixOS.png
 SlidePaths=/home/gustavo/.local/share/wallpapers/,/nix/store/0c1311gy20x5sshmh7dkppxhsx3czwkj-breeze-6.5.6/share/wallpapers/,/run/current-system/sw/share/wallpapers/
 
 [Containments][2]
@@ -66,12 +66,12 @@ DialogHeight=1048
 DialogWidth=1912
 
 [Containments][2][Wallpaper][luisbocanegra.smart.video.wallpaper.reborn][General]
-LastVideo=file:///home/gustavo/MEGA/Images/Wallpapers/Live_Wallpapers/Reze_Bomb_Devil_2560x1440.mp4
+LastVideo=file:///home/gustavo/ProtonDrive/MEGA/Images/Wallpapers/Live_Wallpapers/Reze_Bomb_Devil_2560x1440.mp4
 LastVideoPosition=13550
-VideoUrls=[{"filename":"file:///home/gustavo/MEGA/Images/Wallpapers/Live_Wallpapers/Reze_Bomb_Devil_2560x1440.mp4","enabled":true,"duration":0,"customDuration":0,"playbackRate":0,"alternativePlaybackRate":0,"loop":false}]
+VideoUrls=[{"filename":"file:///home/gustavo/ProtonDrive/MEGA/Images/Wallpapers/Live_Wallpapers/Reze_Bomb_Devil_2560x1440.mp4","enabled":true,"duration":0,"customDuration":0,"playbackRate":0,"alternativePlaybackRate":0,"loop":false}]
 
 [Containments][2][Wallpaper][org.kde.image][General]
-Image=file:///home/gustavo/MEGA/Images/Wallpapers/Static Wallpaper/Lain_Serial_Experiments_NixOS.png
+Image=file:///home/gustavo/ProtonDrive/MEGA/Images/Wallpapers/Static Wallpaper/Lain_Serial_Experiments_NixOS.png
 SlidePaths=/home/gustavo/.local/share/wallpapers/,/nix/store/0c1311gy20x5sshmh7dkppxhsx3czwkj-breeze-6.5.6/share/wallpapers/,/run/current-system/sw/share/wallpapers/
 
 [Containments][3]

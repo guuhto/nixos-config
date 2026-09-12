@@ -75,7 +75,6 @@
     sweet-nova
 
     # Cloud
-    megasync
     nextcloud-client
     rclone  
 

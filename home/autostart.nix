@@ -1,19 +1,5 @@
 { pkgs, ... }:
 {
-  systemd.user.services.megasync = {
-    Unit = {
-      Description = "MEGAsync";
-      After = [ "graphical-session.target" ];
-    };
-    Service = {
-      Environment = [ "QT_QPA_PLATFORMTHEME=kde" "QT_STYLE_OVERRIDE=Breeze" ];
-      ExecStart = "${pkgs.megasync}/bin/megasync";
-      Restart = "on-failure";
-      RestartSec = 5;
-    };
-    Install.WantedBy = [ "graphical-session.target" ];
-  };
-
   systemd.user.services.nextcloud = {
     Unit = {
       Description = "Nextcloud Desktop Client";
@@ -28,10 +14,12 @@
     Install.WantedBy = [ "graphical-session.target" ];
   };
 
-  systemd.user.services.protondrive = {
+    systemd.user.services.protondrive = {
     Unit = {
       Description = "Proton Drive (rclone)";
       After = [ "network-online.target" ];
+      StartLimitBurst = 3;
+      StartLimitIntervalSec = 300;
     };
     Service = {
       RuntimeDirectory = "rclone";
@@ -43,6 +31,7 @@
       '';
       ExecStop = "${pkgs.fuse3}/bin/fusermount3 -u %h/ProtonDrive";
       Restart = "on-failure";
+      RestartSec = 30;
     };
     Install.WantedBy = [ "default.target" ];
   };
