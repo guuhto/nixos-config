@@ -5,6 +5,7 @@
 
   networking.firewall = {
     enable = true;
+    checkReversePath = "loose";
     allowedTCPPorts = [ ];
     allowedUDPPorts = [ ];
   };
