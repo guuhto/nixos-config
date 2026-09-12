@@ -75,6 +75,11 @@
     # Cloud
     megasync
     nextcloud-client
+ 
+    # Proton
+    protonmail-desktop
+    proton-pass
+    proton-authenticator-bin
 
     # App Center
     bazaar
