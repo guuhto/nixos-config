@@ -24,10 +24,12 @@
     Service = {
       RuntimeDirectory = "rclone";
       ExecStartPre = "${pkgs.coreutils}/bin/install -m600 /run/secrets/rclone.conf %t/rclone/rclone.conf";
-      ExecStart = ''
+       ExecStart = ''
         ${pkgs.rclone}/bin/rclone mount protondrive: %h/ProtonDrive \
           --config %t/rclone/rclone.conf \
-          --vfs-cache-mode full
+          --vfs-cache-mode full \
+          --low-level-retries 1 \
+          --retries 1
       '';
       ExecStop = "${pkgs.fuse3}/bin/fusermount3 -u %h/ProtonDrive";
       Restart = "on-failure";
