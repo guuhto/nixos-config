@@ -5,75 +5,6 @@ RightButton;NoModifier=org.kde.contextmenu
 [ActionPlugins][1]
 RightButton;NoModifier=org.kde.contextmenu
 
-[Containments][1]
-ItemGeometries-1920x1080=Applet-90:1520,256,272,160,0;
-ItemGeometriesHorizontal=Applet-90:1520,256,272,160,0;
-activityId=dfb8c4ac-8fd4-470f-bdc2-7911a2e46971
-formfactor=0
-immutability=1
-lastScreen=0
-location=0
-plugin=org.kde.plasma.folder
-wallpaperplugin=luisbocanegra.smart.video.wallpaper.reborn
-
-[Containments][1][Applets][90]
-immutability=1
-plugin=com.marcinorlowski.htmlclock
-
-[Containments][1][Applets][90][Configuration]
-UserBackgroundHints=ShadowBackground
-popupHeight=378
-popupWidth=378
-
-[Containments][1][Applets][90][Configuration][Appearance]
-layoutKey=date-time-grid-with-day
-useUserLayout=true
-
-[Containments][1][Applets][90][Configuration][ConfigDialog]
-DialogHeight=1021
-DialogWidth=1912
-
-[Containments][1][Applets][90][Configuration][Layout]
-layout=<html>\n<body>\n<table style="border: none;" align="center">\n    <tr>\n        <!-- clock -->\n        <td valign="middle" align="center" style="padding-right: 0px;">\n            <span style="font-size: 80px; font-weight: bold; color: #FFff006e;">{hh}</span>\n            <span style="font-size: 60px; font-weight: bold; color: #{cycle|00|FF}ff006e;">:</span>\n            <span style="font-size: 40px; color: white;">{ii}</span>\n        </td>\n        <!-- verical divider -->\n        <td rowspan="2" width="1" style="vertical-align: middle; background-color: #FFff006e;">\n            <span style="font-size: 25px;"><br /><br /></span>\n        </td>\n        <!-- calendar -->\n        <td rowspan="2" valign="middle" align="center" style="padding-left: 10px;">\n            <span style="font-size: 20px; font-weight: bold; color: white;">{dd}<br />{MM|U}<br />{yyyy}</span>\n        <td>\n    </tr>\n    <tr>\n        <!-- weekday name -->\n        <td valign="middle" align="center" style="padding-right: 4px;">\n            <span style="font-size: 20px; font-weight: bold; color: white;">{DDD|U}</span>\n        </td>\n    </tr>\n</table>\n</body>\n</html>
-
-[Containments][1][ConfigDialog]
-DialogHeight=1021
-DialogWidth=952
-
-[Containments][1][Wallpaper][luisbocanegra.smart.video.wallpaper.reborn][General]
-LastVideo=file:///home/gustavo/ProtonDrive/MEGA/Images/Wallpapers/Live_Wallpapers/Reze_Bomb_Devil_2560x1440.mp4
-LastVideoPosition=9816
-PauseMode=3
-VideoUrls=[{"filename":"file:///home/gustavo/ProtonDrive/MEGA/Images/Wallpapers/Live_Wallpapers/Reze_Bomb_Devil_2560x1440.mp4","enabled":true,"duration":0,"customDuration":0,"playbackRate":0,"alternativePlaybackRate":0,"loop":false}]
-
-[Containments][1][Wallpaper][org.kde.image][General]
-Image=file:///home/gustavo/ProtonDrive/MEGA/Images/Wallpapers/Static Wallpaper/Lain_Serial_Experiments_NixOS.png
-SlidePaths=/home/gustavo/.local/share/wallpapers/,/nix/store/0c1311gy20x5sshmh7dkppxhsx3czwkj-breeze-6.5.6/share/wallpapers/,/run/current-system/sw/share/wallpapers/
-
-[Containments][2]
-ItemGeometries-1920x1080=
-ItemGeometriesHorizontal=
-activityId=dfb8c4ac-8fd4-470f-bdc2-7911a2e46971
-formfactor=0
-immutability=1
-lastScreen=1
-location=0
-plugin=org.kde.plasma.folder
-wallpaperplugin=luisbocanegra.smart.video.wallpaper.reborn
-
-[Containments][2][ConfigDialog]
-DialogHeight=1048
-DialogWidth=1912
-
-[Containments][2][Wallpaper][luisbocanegra.smart.video.wallpaper.reborn][General]
-LastVideo=file:///home/gustavo/ProtonDrive/MEGA/Images/Wallpapers/Live_Wallpapers/Reze_Bomb_Devil_2560x1440.mp4
-LastVideoPosition=13550
-VideoUrls=[{"filename":"file:///home/gustavo/ProtonDrive/MEGA/Images/Wallpapers/Live_Wallpapers/Reze_Bomb_Devil_2560x1440.mp4","enabled":true,"duration":0,"customDuration":0,"playbackRate":0,"alternativePlaybackRate":0,"loop":false}]
-
-[Containments][2][Wallpaper][org.kde.image][General]
-Image=file:///home/gustavo/ProtonDrive/MEGA/Images/Wallpapers/Static Wallpaper/Lain_Serial_Experiments_NixOS.png
-SlidePaths=/home/gustavo/.local/share/wallpapers/,/nix/store/0c1311gy20x5sshmh7dkppxhsx3czwkj-breeze-6.5.6/share/wallpapers/,/run/current-system/sw/share/wallpapers/
-
 [Containments][3]
 activityId=
 formfactor=2
@@ -96,7 +27,7 @@ DialogHeight=630
 DialogWidth=810
 
 [Containments][3][Applets][84][Configuration][General]
-launchers=applications:systemsettings.desktop,file:///nix/store/2dxmp12idf84km6m1smcpb4jjb3rkafv-system-path/share/applications/org.kde.dolphin.desktop,file:///nix/store/kbg57v5pdrim3c9ajcna2cvdpdhyvsin-user-environment/share/applications/kitty.desktop,applications:com.ktechpit.whatsie.desktop,preferred://browser
+launchers=applications:systemsettings.desktop,file:///nix/store/jvp1pxwfgbb6h55f1kv1vrdsspljbdx6-user-environment/share/applications/kitty.desktop,preferred://browser
 
 [Containments][3][Applets][89]
 immutability=1
@@ -111,7 +42,7 @@ DialogHeight=630
 DialogWidth=810
 
 [Containments][3][Applets][89][Configuration][General]
-customButtonImage=/home/gustavo/Pictures/KDE App Launcher Arch Linux Icons/nix-snowflake-colours.svg
+customButtonImage=/home/gustavo/Pictures/KDE App Launcher Arch Linux Icons/nix-snowflake-white.svg
 favoritesPortedToKAstats=true
 floating=true
 launcherPosition=1
@@ -279,6 +210,63 @@ visualizerPositionCompact=right
 
 [Containments][49][General]
 AppletOrder=87;88;67;68;86
+
+[Containments][91]
+ItemGeometries-1920x1080=Applet-95:48,80,208,144,0;
+ItemGeometriesHorizontal=Applet-95:48,80,208,144,0;
+activityId=4f5b995a-0ba8-47ce-9496-3b67f13f1cf5
+formfactor=0
+immutability=1
+lastScreen=0
+location=0
+plugin=org.kde.plasma.folder
+wallpaperplugin=luisbocanegra.smart.video.wallpaper.reborn
+
+[Containments][91][Applets][95]
+immutability=1
+plugin=com.marcinorlowski.htmlclock
+
+[Containments][91][Applets][95][Configuration]
+UserBackgroundHints=ShadowBackground
+popupHeight=378
+popupWidth=378
+
+[Containments][91][Applets][95][Configuration][Appearance]
+useUserLayout=true
+
+[Containments][91][Applets][95][Configuration][ConfigDialog]
+DialogHeight=1013
+DialogWidth=1920
+
+[Containments][91][Applets][95][Configuration][Layout]
+layout=<html>\n<body>\n<table style="border: none;" align="center">\n    <tr>\n        <!-- clock -->\n        <td valign="middle" align="center" style="padding-right: 4px;">\n            <span style="font-size: 50px; font-weight: bold; color: #FFff006e;">{hh}</span>\n            <span style="font-size: 30px; font-weight: bold; color: #{cycle|00|FF}ff006e;">:</span>\n            <span style="font-size: 40px; color: white;">{ii}</span>\n        </td>\n        <!-- verical divider -->\n        <td rowspan="2" width="1" style="vertical-align: middle; background-color: #FFff006e;">\n            <span style="font-size: 25px;"><br /><br /></span>\n        </td>\n        <!-- calendar -->\n        <td rowspan="2" valign="middle" align="center" style="padding-left: 4px;">\n            <span style="font-size: 15px; font-weight: bold; color: white;">{dd}<br />{MM|U}<br />{yyyy}</span>\n        <td>\n    </tr>\n    <tr>\n        <!-- weekday name -->\n        <td valign="middle" align="center" style="padding-right: 4px;">\n            <span style="font-size: 15px; font-weight: bold; color: white;">{DDD|U}</span>\n        </td>\n    </tr>\n</table>\n</body>\n</html>
+
+[Containments][91][ConfigDialog]
+DialogHeight=630
+DialogWidth=810
+
+[Containments][91][Wallpaper][luisbocanegra.smart.video.wallpaper.reborn][General]
+LastVideo=file:///home/gustavo/Pictures/Wallpapers/Live_Wallpapers/Summer-Sky-Melody.1920x1080.mp4
+LastVideoPosition=8166
+VideoUrls=[{"filename":"file:///home/gustavo/Pictures/Wallpapers/Live_Wallpapers/Summer-Sky-Melody.1920x1080.mp4","enabled":true,"duration":0,"customDuration":0,"playbackRate":0,"alternativePlaybackRate":0,"loop":false}]
+
+[Containments][92]
+activityId=4f5b995a-0ba8-47ce-9496-3b67f13f1cf5
+formfactor=0
+immutability=1
+lastScreen=1
+location=0
+plugin=org.kde.plasma.folder
+wallpaperplugin=luisbocanegra.smart.video.wallpaper.reborn
+
+[Containments][92][ConfigDialog]
+DialogHeight=630
+DialogWidth=810
+
+[Containments][92][Wallpaper][luisbocanegra.smart.video.wallpaper.reborn][General]
+LastVideo=file:///home/gustavo/Pictures/Wallpapers/Live_Wallpapers/Summer-Sky-Melody.1920x1080.mp4
+LastVideoPosition=5833
+VideoUrls=[{"filename":"file:///home/gustavo/Pictures/Wallpapers/Live_Wallpapers/Summer-Sky-Melody.1920x1080.mp4","enabled":true,"duration":0,"customDuration":0,"playbackRate":0,"alternativePlaybackRate":0,"loop":false}]
 
 [ScreenMapping]
 itemsOnDisabledScreens=
