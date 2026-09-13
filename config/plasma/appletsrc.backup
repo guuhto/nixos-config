@@ -27,7 +27,7 @@ DialogHeight=630
 DialogWidth=810
 
 [Containments][3][Applets][84][Configuration][General]
-launchers=applications:systemsettings.desktop,file:///nix/store/jvp1pxwfgbb6h55f1kv1vrdsspljbdx6-user-environment/share/applications/kitty.desktop,preferred://browser
+launchers=applications:systemsettings.desktop,file:///nix/store/jvp1pxwfgbb6h55f1kv1vrdsspljbdx6-user-environment/share/applications/kitty.desktop,file:///nix/store/jvp1pxwfgbb6h55f1kv1vrdsspljbdx6-user-environment/share/applications/proton-mail.desktop,preferred://browser
 
 [Containments][3][Applets][89]
 immutability=1
@@ -73,8 +73,8 @@ immutability=1
 lastScreen=-1
 location=0
 plugin=org.kde.plasma.systemtray
-popupHeight=432
-popupWidth=432
+popupHeight=436
+popupWidth=436
 wallpaperplugin=org.kde.image
 
 [Containments][49][Applets][68][Applets][69]
@@ -204,7 +204,7 @@ DialogWidth=810
 compactMaxWidth=10
 scrollingTextSpeed=30
 visualizerBars=30
-visualizerColor=#3498db
+visualizerColor=#cba6f7
 visualizerHeight=40
 visualizerPositionCompact=right
 
@@ -242,12 +242,13 @@ DialogWidth=1920
 layout=<html>\n<body>\n<table style="border: none;" align="center">\n    <tr>\n        <!-- clock -->\n        <td valign="middle" align="center" style="padding-right: 4px;">\n            <span style="font-size: 50px; font-weight: bold; color: #FFff006e;">{hh}</span>\n            <span style="font-size: 30px; font-weight: bold; color: #{cycle|00|FF}ff006e;">:</span>\n            <span style="font-size: 40px; color: white;">{ii}</span>\n        </td>\n        <!-- verical divider -->\n        <td rowspan="2" width="1" style="vertical-align: middle; background-color: #FFff006e;">\n            <span style="font-size: 25px;"><br /><br /></span>\n        </td>\n        <!-- calendar -->\n        <td rowspan="2" valign="middle" align="center" style="padding-left: 4px;">\n            <span style="font-size: 15px; font-weight: bold; color: white;">{dd}<br />{MM|U}<br />{yyyy}</span>\n        <td>\n    </tr>\n    <tr>\n        <!-- weekday name -->\n        <td valign="middle" align="center" style="padding-right: 4px;">\n            <span style="font-size: 15px; font-weight: bold; color: white;">{DDD|U}</span>\n        </td>\n    </tr>\n</table>\n</body>\n</html>
 
 [Containments][91][ConfigDialog]
-DialogHeight=630
-DialogWidth=810
+DialogHeight=1022
+DialogWidth=1920
 
 [Containments][91][Wallpaper][luisbocanegra.smart.video.wallpaper.reborn][General]
 LastVideo=file:///home/gustavo/Pictures/Wallpapers/Live_Wallpapers/Summer-Sky-Melody.1920x1080.mp4
-LastVideoPosition=8166
+LastVideoPosition=2633
+PauseMode=3
 VideoUrls=[{"filename":"file:///home/gustavo/Pictures/Wallpapers/Live_Wallpapers/Summer-Sky-Melody.1920x1080.mp4","enabled":true,"duration":0,"customDuration":0,"playbackRate":0,"alternativePlaybackRate":0,"loop":false}]
 
 [Containments][92]
@@ -265,7 +266,7 @@ DialogWidth=810
 
 [Containments][92][Wallpaper][luisbocanegra.smart.video.wallpaper.reborn][General]
 LastVideo=file:///home/gustavo/Pictures/Wallpapers/Live_Wallpapers/Summer-Sky-Melody.1920x1080.mp4
-LastVideoPosition=5833
+LastVideoPosition=1833
 VideoUrls=[{"filename":"file:///home/gustavo/Pictures/Wallpapers/Live_Wallpapers/Summer-Sky-Melody.1920x1080.mp4","enabled":true,"duration":0,"customDuration":0,"playbackRate":0,"alternativePlaybackRate":0,"loop":false}]
 
 [ScreenMapping]
