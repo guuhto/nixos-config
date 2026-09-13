@@ -19,8 +19,8 @@
       iconTheme = "YAMIS";
       cursor.theme = "catppuccin-mocha-mauve-cursors";
       windowDecorations = {
-        library = "org.kde.kwin.aurorae";
-        theme = "__aurorae__svg__CatppuccinMocha-Modern";
+        library = "org.kde.kwin.klassy";
+        theme = "Klassy";
       };
     };
 
