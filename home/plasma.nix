@@ -14,7 +14,7 @@
     overrideConfig = false;
 
     workspace = {
-      lookAndFeel = "Catppuccin-Mocha-Mauve";
+      # lookAndFeel = "Catppuccin-Mocha-Mauve";
       colorScheme = "CatppuccinMochaMauve";
       iconTheme = "YAMIS";
       cursor.theme = "catppuccin-mocha-mauve-cursors";
