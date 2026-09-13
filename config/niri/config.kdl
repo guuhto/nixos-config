@@ -1,0 +1,12 @@
+binds {
+    Mod+T { spawn "kitty"; }
+    Mod+Return { spawn "kitty"; }
+    Mod+Q { close-window; }
+    Mod+Shift+E { quit; }
+    Mod+Shift+Slash { show-hotkey-overlay; }
+    Mod+Left  { focus-column-left; }
+    Mod+Right { focus-column-right; }
+    Mod+F { maximize-column; }
+}
+
+spawn-at-startup "sh" "-c" "sleep 2 && noctalia-shell"
