@@ -10,6 +10,10 @@
     ./rust.nix
     ./spotifyd.nix
     ./ssh.nix
+    ./spotifyd.nix
+    ./ssh.nix
+    ./theme.nix
+    ./variables.nix
     ./variables.nix
     ./xdg.nix
     ./zed/default.nix
