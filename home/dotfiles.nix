@@ -3,7 +3,6 @@
   home.file = {
     ".config/fastfetch".source = ../config/fastfetch;
     ".config/kitty/kitty.conf".source = ../config/kitty/kitty.conf;
-    ".config/niri/config.kdl".source = ../config/niri/config.kdl;
     ".config/nnn/bookmarks".source = ../config/nnn/bookmarks;
     ".config/nnn/plugins".source = ../config/nnn/plugins;
     ".config/spotatui/config.yml".source = ../config/spotatui/config.yml;

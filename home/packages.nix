@@ -61,6 +61,8 @@
     # Media
     gimp
     vlc
+    (pkgs.callPackage ../pkgs/goanime.nix { buildGoModule = pkgs.buildGo127Module; })
+    mpv    
 
     # Music
     spotatui

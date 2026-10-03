@@ -12,7 +12,6 @@
     ./ssh.nix
     ./spotifyd.nix
     ./ssh.nix
-    ./theme.nix
     ./variables.nix
     ./variables.nix
     ./xdg.nix

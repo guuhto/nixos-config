@@ -14,7 +14,6 @@
     ./modules/flatpak.nix
     ./modules/fonts.nix
     ./modules/network.nix
-    ./modules/niri.nix
     ./modules/programs.nix
     ./modules/proton.nix
     ./modules/sops.nix
