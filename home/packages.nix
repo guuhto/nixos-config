@@ -1,6 +1,10 @@
 { pkgs, lib, ... }:
 {
   home.packages = with pkgs; [
+ 
+    # Alpaca
+    alpaca
+
     # Development - Tools
     git
     gh
@@ -57,9 +61,6 @@
     qalculate-gtk
     thunderbird
    
-    # Opencode
-    opencode    
-
     # Media
     gimp
     vlc
