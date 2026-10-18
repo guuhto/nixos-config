@@ -3,7 +3,9 @@
   home.packages = with pkgs; [
  
     # Alpaca
-    alpaca
+    (pkgs.alpaca.overridePythonAttrs (old: {
+      dependencies = (old.dependencies or [ ]) ++ [ pkgs.python3Packages.pandas ];
+    }))
 
     # Development - Tools
     git
