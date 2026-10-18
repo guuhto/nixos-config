@@ -56,6 +56,9 @@
     libreoffice-qt
     qalculate-gtk
     thunderbird
+   
+    # Opencode
+    opencode    
 
     # Media
     gimp
