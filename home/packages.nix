@@ -53,7 +53,6 @@
 
     # Office
     obsidian
-    onlyoffice-desktopeditors
     libreoffice-qt
     qalculate-gtk
     thunderbird

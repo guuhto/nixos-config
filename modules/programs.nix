@@ -26,13 +26,13 @@ in
       cairo
       pango
       systemd         # libudev
-      xorg.libxcb
-      xorg.libX11
-      xorg.libXext
-      xorg.libXcomposite
-      xorg.libXdamage
-      xorg.libXfixes
-      xorg.libXrandr
+      libxcb
+      libx11
+      libxext
+      libxcomposite
+      libxdamage
+      libxfixes
+      libxrandr
     ];
   };
 
