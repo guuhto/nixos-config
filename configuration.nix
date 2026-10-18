@@ -7,6 +7,7 @@
 {
   imports = [
     ./hardware-configuration.nix
+    ./modules/ai.nix
     ./modules/audio.nix
     ./modules/bluetooth.nix
     ./modules/boot.nix
