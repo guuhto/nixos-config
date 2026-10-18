@@ -2,6 +2,6 @@
 {
   services.ollama = {
     enable = true;
-    loadModels = [ "qwen3:4b" ];
+    loadModels = [ "gemma4:e2b" "gpt-oss:20b" ];
   };
 }
