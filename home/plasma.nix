@@ -31,6 +31,7 @@
     };
 
     configFile = {
+      "baloofilerc"."Basic Settings"."Indexing-Enabled" = false;
       "kcminputrc"."Keyboard"."NumLock" = 0;
       "kdeglobals"."KDE"."widgetStyle" = "Breeze";
       "kdeglobals"."General"."accentColorFromWallpaper" = false;
