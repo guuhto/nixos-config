@@ -20,6 +20,7 @@
     # Development - LSPs
     clang-tools
     gopls
+    nodejs_22
     pyright
     (lib.hiPrio rust-analyzer)
 
