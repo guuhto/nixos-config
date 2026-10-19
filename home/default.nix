@@ -4,6 +4,7 @@
     ./autostart.nix
     ./dotfiles.nix
     ./git.nix
+    ./java.nix
     ./nvim.nix
     ./packages.nix
     ./plasma.nix
