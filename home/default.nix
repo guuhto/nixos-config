@@ -2,6 +2,7 @@
 {
   imports = [
     ./autostart.nix
+    ./agentcraft.nix
     ./dotfiles.nix
     ./git.nix
     ./java.nix
