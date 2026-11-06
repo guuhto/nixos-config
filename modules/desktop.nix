@@ -18,6 +18,7 @@
     settings.General.InputMethod = "";
   };
   services.desktopManager.plasma6.enable = true;
+  services.orca.enable = false;
 
   services.xserver.xkb = {
     layout = "us";

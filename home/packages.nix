@@ -1,11 +1,18 @@
-{ pkgs, lib, ... }:
+{ pkgs, lib, inputs, ... }:
+let
+  llm = inputs.llm-agents.packages.${pkgs.stdenv.hostPlatform.system};
+in
 {
   home.packages = with pkgs; [
- 
-    # Alpaca
-    (pkgs.alpaca.overridePythonAttrs (old: {
-      dependencies = (old.dependencies or [ ]) ++ [ pkgs.python3Packages.pandas ];
+
+    # AI
+    (alpaca.overridePythonAttrs (old: {
+      dependencies = (old.dependencies or [ ]) ++ [ python3Packages.pandas ];
     }))
+    llm.claude-code
+    llm.dsh
+    llm.opencode
+    llm.orca
 
     # Development - Tools
     git
@@ -24,11 +31,8 @@
     pyright
     (lib.hiPrio rust-analyzer)
 
-    # Claude
-    claude-code
 
     # Gaming
-    jdk21
     prismlauncher
 
     # Shell Utilities
@@ -63,12 +67,12 @@
     libreoffice-qt
     qalculate-gtk
     thunderbird
-   
+
     # Media
     gimp
     vlc
     (pkgs.callPackage ../pkgs/goanime.nix { buildGoModule = pkgs.buildGo127Module; })
-    mpv    
+    mpv
 
     # Music
     spotatui
@@ -84,7 +88,7 @@
 
     # Cloud
     nextcloud-client
-    rclone  
+    rclone
 
     # Proton
     protonmail-desktop
