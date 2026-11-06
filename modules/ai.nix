@@ -9,7 +9,7 @@
   };
 
   systemd.services.ollama.serviceConfig = {
-    MemoryMax = "7G";
+    MemoryMax = "12G";
     MemorySwapMax = "2G";
     Restart = "on-failure";
     RestartSec = 5;

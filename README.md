@@ -303,7 +303,7 @@ sops updatekeys secrets/users.yaml
 ```bash
 cd ~/nixos
 nix flake update
-sudo nixos-rebuild switch --flake .#gustavo-nixos
+sudo nixos-rebuild switch
 ```
 
 `nix flake update` also bumps `llm-agents`, which is rebuilt daily — that is
@@ -313,12 +313,11 @@ how Orca, opencode, dsh and Claude Code stay current.
 
 | Piece | Where | Notes |
 |---|---|---|
-| Ollama | `modules/ai.nix` | CPU only (Vega 8 iGPU has no ROCm). Capped at 7 GB RAM + 2 GB swap and auto-restarts, so an oversized model kills only Ollama |
-| Models | `loadModels` | `gemma4:e2b` for daily use. `gpt-oss:20b` needs 16 GB+ RAM — don't select it before the RAM upgrade |
+| Ollama | `modules/ai.nix` | CPU only (Vega 8 iGPU has no ROCm). Capped at 12 GB RAM + 4 GB swap and auto-restarts, so an oversized model kills only Ollama |
+| Models | `loadModels` | `gemma4:e2b` for daily use. `gpt-oss:20b` fits in 16 GB but is slow on CPU — close heavy apps first |
 | Alpaca | `home/packages.nix` | Overridden to add `pandas`, missing in nixpkgs 9.2.5. Drop the override once nixpkgs fixes it |
 | Orca, opencode, dsh, Claude Code | [`numtide/llm-agents.nix`](https://github.com/numtide/llm-agents.nix) | Flake input without `nixpkgs.follows` on purpose, so builds match `cache.numtide.com` |
 
 The GNOME **Orca screen reader** is disabled in `modules/desktop.nix`
 (`services.orca.enable = false`) — accessibility isn't used, and it shared
 the `orca` command name with the Orca IDE.
-
