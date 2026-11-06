@@ -40,7 +40,6 @@ in
     bat
     btop
     chafa
-    colloid-icon-theme
     eza
     fastfetch
     ffmpeg
@@ -83,8 +82,6 @@ in
     discord
     whatsie
 
-    # Peripherals
-    sweet-nova
 
     # Cloud
     nextcloud-client
