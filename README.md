@@ -11,8 +11,12 @@ nixos/
 ├── hardware-configuration.nix # Machine-specific hardware
 ├── .sops.yaml                 # Which age keys can decrypt secrets/
 ├── secrets/                   # sops-encrypted, safe to commit
+│   ├── rclone.conf            # rclone remotes (binary secret)
 │   └── users.yaml             # gustavo's password hash
+├── pkgs/                      # Local packages not in nixpkgs
+│   └── goanime.nix
 ├── modules/                   # System modules
+│   ├── ai.nix                 # Ollama (CPU only, memory-capped)
 │   ├── audio.nix
 │   ├── bluetooth.nix
 │   ├── boot.nix
@@ -21,14 +25,17 @@ nixos/
 │   ├── fonts.nix
 │   ├── network.nix
 │   ├── programs.nix
+│   ├── proton.nix             # Proton VPN + WireGuard tools
 │   ├── sops.nix
 │   ├── users.nix
 │   └── virtualization.nix
 ├── home/                      # User configuration (Home Manager)
+│   ├── agentcraft.nix         # AgentCraft Foreman user service (manual start)
 │   ├── autostart.nix
 │   ├── default.nix
 │   ├── dotfiles.nix
 │   ├── git.nix
+│   ├── java.nix               # JDK 17/21/25 under ~/.jdks for Prism Launcher
 │   ├── nvim.nix
 │   ├── packages.nix
 │   ├── plasma.nix
@@ -55,10 +62,9 @@ nixos/
     └── plasma/
         ├── appletsrc.backup   # Panel layout (restored manually)
         ├── assets/            # Launcher button icon
-        ├── color-schemes/
-        ├── cursors/
-        ├── desktoptheme/
-        ├── icons/
+        ├── aurorae/           # Window decoration: Sweet-Dark-transparent
+        ├── color-schemes/     # Catppuccin Mocha Mauve
+        ├── desktoptheme/      # Plasma style: Sweet
         ├── plasmoids/         # Third-party widgets
         └── wallpapers/        # Video wallpaper plugin
 ```
@@ -76,8 +82,9 @@ somewhere else:
 
 ## Installation on a new machine
 
-Expect a few hours: the first build pulls ~19 GB and compiles megasync
-from source (no binary cache), which alone takes close to an hour.
+Expect a while: the first build pulls tens of GB, plus ~19 GB of Ollama
+models in the background. AI agent tools come prebuilt from
+`cache.numtide.com` (see [AI tools](#ai-tools)).
 
 ### 1. Install NixOS, then get git
 
@@ -130,7 +137,21 @@ rebuild.
 
 ```bash
 cd ~/nixos
-sudo nixos-rebuild switch --flake .#gustavo-nixos
+sudo nixos-rebuild switch --flake .#gustavo-nixos \
+  --option extra-substituters https://cache.numtide.com \
+  --option extra-trusted-public-keys niks3.numtide.com-1:DTx8wZduET09hRmMtKdQDxNNthLQETkc/yaX7M4qK0g=
+```
+
+The two `--option` flags are only needed on this first build: the numtide
+cache is declared in `configuration.nix`, but the running Nix daemon does not
+know about it yet. Without them, Orca and friends compile from source.
+
+Then point `/etc/nixos` at the flake, so a bare `sudo nixos-rebuild switch`
+works from anywhere:
+
+```bash
+sudo rm -rf /etc/nixos
+sudo ln -s /home/gustavo/nixos /etc/nixos
 ```
 
 **The installer user is removed during this step.** The `gustavo` password
@@ -161,8 +182,17 @@ cp ~/nixos/config/plasma/appletsrc.backup \
    ~/.config/plasma-org.kde.plasma.desktop-appletsrc
 ```
 
-Themes, icons, cursors and third-party widgets are vendored in
-`config/plasma/` and apply automatically.
+The Plasma style (Sweet), window decoration (Sweet-Dark-transparent), color
+scheme (Catppuccin Mocha Mauve) and third-party widgets are vendored in
+`config/plasma/`; the cursors come from nixpkgs. All of them are declared in
+`home/plasma.nix` and apply automatically.
+
+The icon theme is the exception: **Relax-Light-Icons** (61 MB, by
+[L4ki](https://github.com/L4ki/Relax-Plasma-Themes)) is not in the repo yet.
+Install it from System Settings → Icons → *Get New…*.
+
+Never apply a **Global Theme** afterwards: it overwrites icons, colors, style
+and decoration in one go.
 
 ### 6. Authenticate spotifyd
 
@@ -196,11 +226,20 @@ cd ~/nixos
 git remote set-url origin git@github.com:guuhto/nixos-config.git
 ```
 
-### 8. Sync MEGA for wallpapers
+### 8. Sync the wallpapers
 
-Both wallpapers live in `~/MEGA/` and are not in this repo — the static one
-is a PNG, the live one a 1440p MP4. Until MEGA is synced, the desktop
+Both wallpapers live in cloud storage and are not in this repo — the static
+one is a PNG, the live one a 1440p MP4. Until they are synced, the desktop
 falls back to a plain background.
+
+### 9. Local AI and agents
+
+- **Alpaca**: add an instance of type **Ollama (External)** pointing at
+  `http://127.0.0.1:11434`. Don't use "Managed" — it spawns a second Ollama.
+- **opencode**: `/connect` → OpenCode Zen → pick a free zero-retention model.
+- **Orca**: launch with `orca-ide` (`orca` is its CLI).
+- **dsh** (DeepSeek Harness): `dsh web`; on the first screen pick
+  *Configure later* to stay on the local Ollama.
 
 ## Known manual steps
 
@@ -210,8 +249,11 @@ falls back to a plain background.
 | SSH key | Generated per machine, registered on GitHub by hand |
 | Panel layout | `appletsrc.backup`, copied by hand |
 | Spotify OAuth | Token expires every 6 months |
-| MEGAsync / Nextcloud login | Autostart is declared, but each client needs a one-time sign-in |
-| Wallpapers | Live in MEGA, too large to vendor |
+| Nextcloud login | Autostart is declared, but the client needs a one-time sign-in |
+| Wallpapers | Live in cloud storage, too large to vendor |
+| Relax-Light-Icons | Installed from the KDE Store, not packaged yet |
+| `/etc/nixos` link | Installer creates a real directory; replace it with a link to the flake |
+| Alpaca instance | Ollama (External) at `127.0.0.1:11434`, set in the app |
 | `virsh net-start default` | libvirt's default network isn't auto-started |
 
 ## Updating configuration
@@ -224,7 +266,7 @@ check `git status` first.
 ```bash
 cd ~/nixos
 git add .
-sudo nixos-rebuild switch --flake .#gustavo-nixos
+sudo nixos-rebuild switch
 git commit -m "describe your change"
 git push
 ```
@@ -263,3 +305,20 @@ cd ~/nixos
 nix flake update
 sudo nixos-rebuild switch --flake .#gustavo-nixos
 ```
+
+`nix flake update` also bumps `llm-agents`, which is rebuilt daily — that is
+how Orca, opencode, dsh and Claude Code stay current.
+
+## AI tools
+
+| Piece | Where | Notes |
+|---|---|---|
+| Ollama | `modules/ai.nix` | CPU only (Vega 8 iGPU has no ROCm). Capped at 7 GB RAM + 2 GB swap and auto-restarts, so an oversized model kills only Ollama |
+| Models | `loadModels` | `gemma4:e2b` for daily use. `gpt-oss:20b` needs 16 GB+ RAM — don't select it before the RAM upgrade |
+| Alpaca | `home/packages.nix` | Overridden to add `pandas`, missing in nixpkgs 9.2.5. Drop the override once nixpkgs fixes it |
+| Orca, opencode, dsh, Claude Code | [`numtide/llm-agents.nix`](https://github.com/numtide/llm-agents.nix) | Flake input without `nixpkgs.follows` on purpose, so builds match `cache.numtide.com` |
+
+The GNOME **Orca screen reader** is disabled in `modules/desktop.nix`
+(`services.orca.enable = false`) — accessibility isn't used, and it shared
+the `orca` command name with the Orca IDE.
+
