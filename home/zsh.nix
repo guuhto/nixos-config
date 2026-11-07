@@ -17,14 +17,6 @@
       # but dsh refuses to start a provider without one.
       export OLLAMA_API_KEY=ollama
 
-      # Fallback while testing the llm-agents dsh: the old npx route on the
-      # official Node build. Delete it, and ~/.local/opt/node24, once `dsh web` works.
-      dsh-npx() {
-        NIX_LD_LIBRARY_PATH="${pkgs.stdenv.cc.cc.lib}/lib:$NIX_LD_LIBRARY_PATH" \
-        PATH="$HOME/.local/opt/node24/bin:$PATH" \
-        "$HOME/.local/opt/node24/bin/npx" @deepseek-ai/dsh "$@"
-      }
-
       fastfetch
       source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme
       [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
