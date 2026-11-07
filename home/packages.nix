@@ -56,7 +56,10 @@ in
     catdoc
     pandoc
     w3m
-
+   
+    # Themes
+    (callPackage ../pkgs/relax-icons.nix { }) 
+  
     # Terminals
     kitty
     warp-terminal
