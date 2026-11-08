@@ -27,6 +27,7 @@ in
     # Development - LSPs
     clang-tools
     gopls
+    jetbrains.datagrip
     nodejs_22
     pyright
     (lib.hiPrio rust-analyzer)
@@ -83,8 +84,7 @@ in
 
     # Communication
     discord
-    whatsie
-
+    zapzap
 
     # Cloud
     nextcloud-client
