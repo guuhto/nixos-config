@@ -1,13 +1,14 @@
 { pkgs, lib, inputs, ... }:
 let
   llm = inputs.llm-agents.packages.${pkgs.stdenv.hostPlatform.system};
+  alpacaPkgs = inputs.nixpkgs-alpaca.legacyPackages.${pkgs.stdenv.hostPlatform.system};
 in
 {
   home.packages = with pkgs; [
 
     # AI
-    (alpaca.overridePythonAttrs (old: {
-      dependencies = (old.dependencies or [ ]) ++ [ python3Packages.pandas ];
+    (alpacaPkgs.alpaca.overridePythonAttrs (old: {
+      dependencies = (old.dependencies or [ ]) ++ [ alpacaPkgs.python3Packages.pandas ];
     }))
     llm.claude-code
     llm.dsh

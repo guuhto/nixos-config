@@ -6,13 +6,12 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+        # Alpaca only: its Python deps are broken on nixos-unstable after 2026-11-05.
+    # Pinned to the last revision that built; drop once unstable is fixed.
+    nixpkgs-alpaca.url = "github:NixOS/nixpkgs/f9a75f41be3a74eab55d3a7679d34ad6cc0da977";
     # No nixpkgs.follows on purpose: builds must match cache.numtide.com.
     llm-agents.url = "github:numtide/llm-agents.nix";
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-    openlogi = {
-      url = "github:AprilNEA/OpenLogi";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     plasma-manager = {
       url = "github:nix-community/plasma-manager";
       inputs.home-manager.follows = "home-manager";
@@ -25,7 +24,7 @@
     spicetify-nix.url = "github:Gerg-L/spicetify-nix";
   };
 
-  outputs = inputs@{ home-manager, nixpkgs, openlogi, plasma-manager, self, sops-nix, spicetify-nix, ... }: {
+  outputs = inputs@{ home-manager, nixpkgs, plasma-manager, self, sops-nix, spicetify-nix, ... }: {
     nixosConfigurations.gustavo-nixos = nixpkgs.lib.nixosSystem {
       specialArgs = {
         inherit inputs spicetify-nix;
@@ -34,7 +33,6 @@
         { nixpkgs.hostPlatform = "x86_64-linux"; }
         ./configuration.nix
         home-manager.nixosModules.home-manager
-        openlogi.nixosModules.default
         sops-nix.nixosModules.sops
         spicetify-nix.nixosModules.default
         {

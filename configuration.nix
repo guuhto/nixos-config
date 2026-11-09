@@ -30,6 +30,21 @@
       "niks3.numtide.com-1:DTx8wZduET09hRmMtKdQDxNNthLQETkc/yaX7M4qK0g="
     ];
   };
+  nixpkgs.overlays = [
+    (final: prev: {
+      pythonPackagesExtensions = prev.pythonPackagesExtensions ++ [
+        (pyfinal: pyprev: {
+          # 3.17.0's Whisper API tests need network, which the build sandbox
+          # doesn't have. Drop once nixpkgs disables them upstream.
+          speechrecognition = pyprev.speechrecognition.overridePythonAttrs (old: {
+            disabledTestPaths = (old.disabledTestPaths or [ ]) ++ [
+              "tests/recognizers/whisper_api/test_openai.py"
+            ];
+          });
+        })
+      ];
+    })
+  ];
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
   # on your system were taken. It‘s perfectly fine and recommended to leave

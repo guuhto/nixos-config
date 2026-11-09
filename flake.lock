@@ -84,11 +84,11 @@
         "treefmt-nix": "treefmt-nix"
       },
       "locked": {
-        "lastModified": 1794064691,
-        "narHash": "sha256-a2/vYgnX7W3MZurxMDkY8y+sIJuGT2z08tUER3wcbxY=",
+        "lastModified": 1794136683,
+        "narHash": "sha256-cvhBTH6nsE6R6b6uNjoSeuCOH4iaurC5A+/prTxk8Rw=",
         "owner": "numtide",
         "repo": "llm-agents.nix",
-        "rev": "3d32ec231e746b4253bda8bd427025b4dac51785",
+        "rev": "b351c893c53850908a89bc30ea2cbf6437ada413",
         "type": "github"
       },
       "original": {
@@ -113,13 +113,29 @@
         "type": "github"
       }
     },
-    "nixpkgs_2": {
+    "nixpkgs-alpaca": {
       "locked": {
         "lastModified": 1793876309,
         "narHash": "sha256-Wojg9lIH/hDH91iDVH2/EPw8oDSpxjxhXONbU1yf4Zg=",
         "owner": "NixOS",
         "repo": "nixpkgs",
         "rev": "f9a75f41be3a74eab55d3a7679d34ad6cc0da977",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "f9a75f41be3a74eab55d3a7679d34ad6cc0da977",
+        "type": "github"
+      }
+    },
+    "nixpkgs_2": {
+      "locked": {
+        "lastModified": 1794042290,
+        "narHash": "sha256-ziZn2PvCJE5JEEpqTdxXwJpPB+L3YqoCpTAMCzyaP3U=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "f4a03c008967841f2a0b3cb7c436fc6fc31671f6",
         "type": "github"
       },
       "original": {
@@ -140,27 +156,6 @@
       "original": {
         "type": "tarball",
         "url": "https://channels.nixos.org/nixos-unstable/nixexprs.tar.xz"
-      }
-    },
-    "openlogi": {
-      "inputs": {
-        "nixpkgs": [
-          "nixpkgs"
-        ],
-        "rust-overlay": "rust-overlay"
-      },
-      "locked": {
-        "lastModified": 1792330976,
-        "narHash": "sha256-DQphZm4cEVE2qxdlFaHJwQ7BuiRnkoYy7nJHIqDc+PY=",
-        "owner": "AprilNEA",
-        "repo": "OpenLogi",
-        "rev": "abc815acf9ebb4df06ccc574016bad2c9b4152ee",
-        "type": "github"
-      },
-      "original": {
-        "owner": "AprilNEA",
-        "repo": "OpenLogi",
-        "type": "github"
       }
     },
     "plasma-manager": {
@@ -191,31 +186,10 @@
         "home-manager": "home-manager",
         "llm-agents": "llm-agents",
         "nixpkgs": "nixpkgs_2",
-        "openlogi": "openlogi",
+        "nixpkgs-alpaca": "nixpkgs-alpaca",
         "plasma-manager": "plasma-manager",
         "sops-nix": "sops-nix",
         "spicetify-nix": "spicetify-nix"
-      }
-    },
-    "rust-overlay": {
-      "inputs": {
-        "nixpkgs": [
-          "openlogi",
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1790756160,
-        "narHash": "sha256-NPs4nNLxCpho3Ctj8O7t/bzmX0zR8r0zndKghAFEz5U=",
-        "owner": "oxalica",
-        "repo": "rust-overlay",
-        "rev": "ed3a19fd0439ed618ec5fe1e12f0ba69a8be38b5",
-        "type": "github"
-      },
-      "original": {
-        "owner": "oxalica",
-        "repo": "rust-overlay",
-        "type": "github"
       }
     },
     "sops-nix": {
