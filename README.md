@@ -14,7 +14,8 @@ nixos/
 │   ├── rclone.conf            # rclone remotes (binary secret)
 │   └── users.yaml             # gustavo's password hash
 ├── pkgs/                      # Local packages not in nixpkgs
-│   └── goanime.nix
+│   ├── goanime.nix
+│   └── hatter-icons.nix       # Hatter icon theme, built from source
 ├── modules/                   # System modules
 │   ├── ai.nix                 # Ollama (CPU only, memory-capped)
 │   ├── audio.nix
@@ -185,9 +186,10 @@ The Plasma style and window decoration are stock Breeze. The color scheme
 `config/plasma/`; the cursors come from nixpkgs. All of them are declared in
 `home/plasma.nix` and apply automatically.
 
-The icon theme is the exception: **Hatter-kde-dark** (by
-[Mibea](https://github.com/Mibea/Hatter)) is not packaged. Install it from
-System Settings → Icons → *Get New…*.
+The icon theme, **Hatter-kde-dark** (by
+[Mibea](https://github.com/Mibea/Hatter)), is built by `pkgs/hatter-icons.nix`
+from the author's repository, with two fixes: coloured icons in file-manager
+sidebars and outline icons across the power menu.
 
 Never apply a **Global Theme** afterwards: it overwrites icons, colors, style
 and decoration in one go.
@@ -249,7 +251,6 @@ falls back to a plain background.
 | Spotify OAuth | Token expires every 6 months |
 | Nextcloud login | Autostart is declared, but the client needs a one-time sign-in |
 | Wallpapers | Live in cloud storage, too large to vendor |
-| Hatter icons | Installed from the KDE Store, not packaged |
 | `/etc/nixos` link | Installer creates a real directory; replace it with a link to the flake |
 | Alpaca instance | Ollama (External) at `127.0.0.1:11434`, set in the app |
 | `virsh net-start default` | libvirt's default network isn't auto-started |

@@ -96,5 +96,7 @@ in
 
     # App Center
     bazaar
+    # Themes
+    (callPackage ../pkgs/hatter-icons.nix { })
   ];
 }
