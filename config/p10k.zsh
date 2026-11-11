@@ -192,7 +192,7 @@
   #################################[ os_icon: os identifier ]##################################
   # OS identifier color.
   typeset -g POWERLEVEL9K_OS_ICON_FOREGROUND=232
-  typeset -g POWERLEVEL9K_OS_ICON_BACKGROUND=218
+  typeset -g POWERLEVEL9K_OS_ICON_BACKGROUND='#bf616a'
   # Custom icon.
   # typeset -g POWERLEVEL9K_OS_ICON_CONTENT_EXPANSION='⭐'
 
@@ -221,7 +221,7 @@
 
   ##################################[ dir: current directory ]##################################
   # Current directory background color.
-  typeset -g POWERLEVEL9K_DIR_BACKGROUND=218
+  typeset -g POWERLEVEL9K_DIR_BACKGROUND='#bf616a'
   # Default current directory foreground color.
   typeset -g POWERLEVEL9K_DIR_FOREGROUND=254
   # If directory is too long, shorten some of its segments to the shortest possible unique
@@ -361,10 +361,10 @@
 
   #####################################[ vcs: git status ]######################################
   # Version control background colors.
-  typeset -g POWERLEVEL9K_VCS_CLEAN_BACKGROUND=218
-  typeset -g POWERLEVEL9K_VCS_MODIFIED_BACKGROUND=218
-  typeset -g POWERLEVEL9K_VCS_UNTRACKED_BACKGROUND=218
-  typeset -g POWERLEVEL9K_VCS_CONFLICTED_BACKGROUND=218
+  typeset -g POWERLEVEL9K_VCS_CLEAN_BACKGROUND='#bf616a'
+  typeset -g POWERLEVEL9K_VCS_MODIFIED_BACKGROUND='#bf616a'
+  typeset -g POWERLEVEL9K_VCS_UNTRACKED_BACKGROUND='#bf616a'
+  typeset -g POWERLEVEL9K_VCS_CONFLICTED_BACKGROUND='#bf616a'
 
   # Branch icon. Set this parameter to '\UE0A0 ' for the popular Powerline branch icon.
   typeset -g POWERLEVEL9K_VCS_BRANCH_ICON='\uF126 '
@@ -519,21 +519,21 @@
   typeset -g POWERLEVEL9K_STATUS_OK=true
   typeset -g POWERLEVEL9K_STATUS_OK_VISUAL_IDENTIFIER_EXPANSION='✔'
   typeset -g POWERLEVEL9K_STATUS_OK_FOREGROUND=2
-  typeset -g POWERLEVEL9K_STATUS_OK_BACKGROUND=218
+  typeset -g POWERLEVEL9K_STATUS_OK_BACKGROUND='#bf616a'
 
   # Status when some part of a pipe command fails but the overall exit status is zero. It may look
   # like this: 1|0.
   typeset -g POWERLEVEL9K_STATUS_OK_PIPE=true
   typeset -g POWERLEVEL9K_STATUS_OK_PIPE_VISUAL_IDENTIFIER_EXPANSION='✔'
   typeset -g POWERLEVEL9K_STATUS_OK_PIPE_FOREGROUND=0
-  typeset -g POWERLEVEL9K_STATUS_OK_PIPE_BACKGROUND=218
+  typeset -g POWERLEVEL9K_STATUS_OK_PIPE_BACKGROUND='#bf616a'
 
   # Status when it's just an error code (e.g., '1'). No need to show it if prompt_char is enabled as
   # it will signify error by turning red.
   typeset -g POWERLEVEL9K_STATUS_ERROR=true
   typeset -g POWERLEVEL9K_STATUS_ERROR_VISUAL_IDENTIFIER_EXPANSION='✘'
   typeset -g POWERLEVEL9K_STATUS_ERROR_FOREGROUND=0
-  typeset -g POWERLEVEL9K_STATUS_ERROR_BACKGROUND=218
+  typeset -g POWERLEVEL9K_STATUS_ERROR_BACKGROUND='#bf616a'
 
   # Status when the last command was terminated by a signal.
   typeset -g POWERLEVEL9K_STATUS_ERROR_SIGNAL=true
@@ -541,7 +541,7 @@
   typeset -g POWERLEVEL9K_STATUS_VERBOSE_SIGNAME=false
   typeset -g POWERLEVEL9K_STATUS_ERROR_SIGNAL_VISUAL_IDENTIFIER_EXPANSION='✘'
   typeset -g POWERLEVEL9K_STATUS_ERROR_SIGNAL_FOREGROUND=0
-  typeset -g POWERLEVEL9K_STATUS_ERROR_SIGNAL_BACKGROUND=218
+  typeset -g POWERLEVEL9K_STATUS_ERROR_SIGNAL_BACKGROUND='#bf616a'
 
   # Status when some part of a pipe command fails and the overall exit status is also non-zero.
   # It may look like this: 1|0.
@@ -553,7 +553,7 @@
   ###################[ command_execution_time: duration of the last command ]###################
   # Execution time color.
   typeset -g POWERLEVEL9K_COMMAND_EXECUTION_TIME_FOREGROUND=0
-  typeset -g POWERLEVEL9K_COMMAND_EXECUTION_TIME_BACKGROUND=218
+  typeset -g POWERLEVEL9K_COMMAND_EXECUTION_TIME_BACKGROUND='#bf616a'
   # Show duration of the last command if takes at least this many seconds.
   typeset -g POWERLEVEL9K_COMMAND_EXECUTION_TIME_THRESHOLD=3
   # Show this many fractional digits. Zero means round to seconds.
@@ -568,7 +568,7 @@
   #######################[ background_jobs: presence of background jobs ]#######################
   # Background jobs color.
   typeset -g POWERLEVEL9K_BACKGROUND_JOBS_FOREGROUND=0
-  typeset -g POWERLEVEL9K_BACKGROUND_JOBS_BACKGROUND=218
+  typeset -g POWERLEVEL9K_BACKGROUND_JOBS_BACKGROUND='#bf616a'
   # Don't show the number of background jobs.
   typeset -g POWERLEVEL9K_BACKGROUND_JOBS_VERBOSE=false
   # Custom icon.
@@ -577,7 +577,7 @@
   #######################[ direnv: direnv status (https://direnv.net/) ]########################
   # Direnv color.
   typeset -g POWERLEVEL9K_DIRENV_FOREGROUND=0
-  typeset -g POWERLEVEL9K_DIRENV_BACKGROUND=218
+  typeset -g POWERLEVEL9K_DIRENV_BACKGROUND='#bf616a'
   # Custom icon.
   # typeset -g POWERLEVEL9K_DIRENV_VISUAL_IDENTIFIER_EXPANSION='⭐'
 
@@ -840,13 +840,13 @@
   typeset -g POWERLEVEL9K_VI_MODE_FOREGROUND=0
   # Text and color for normal (a.k.a. command) vi mode.
   typeset -g POWERLEVEL9K_VI_COMMAND_MODE_STRING=NORMAL
-  typeset -g POWERLEVEL9K_VI_MODE_NORMAL_BACKGROUND=218
+  typeset -g POWERLEVEL9K_VI_MODE_NORMAL_BACKGROUND='#bf616a'
   # Text and color for visual vi mode.
   typeset -g POWERLEVEL9K_VI_VISUAL_MODE_STRING=VISUAL
-  typeset -g POWERLEVEL9K_VI_MODE_VISUAL_BACKGROUND=218
+  typeset -g POWERLEVEL9K_VI_MODE_VISUAL_BACKGROUND='#bf616a'
   # Text and color for overtype (a.k.a. overwrite and replace) vi mode.
   typeset -g POWERLEVEL9K_VI_OVERWRITE_MODE_STRING=OVERTYPE
-  typeset -g POWERLEVEL9K_VI_MODE_OVERWRITE_BACKGROUND=218
+  typeset -g POWERLEVEL9K_VI_MODE_OVERWRITE_BACKGROUND='#bf616a'
   # Text and color for insert vi mode.
   typeset -g POWERLEVEL9K_VI_INSERT_MODE_STRING=
   typeset -g POWERLEVEL9K_VI_MODE_INSERT_FOREGROUND=8
@@ -972,13 +972,13 @@
   ##################################[ context: user@hostname ]##################################
   # Context color when running with privileges.
   typeset -g POWERLEVEL9K_CONTEXT_ROOT_FOREGROUND=0
-  typeset -g POWERLEVEL9K_CONTEXT_ROOT_BACKGROUND=218
+  typeset -g POWERLEVEL9K_CONTEXT_ROOT_BACKGROUND='#bf616a'
   # Context color in SSH without privileges.
   typeset -g POWERLEVEL9K_CONTEXT_{REMOTE,REMOTE_SUDO}_FOREGROUND=3
   typeset -g POWERLEVEL9K_CONTEXT_{REMOTE,REMOTE_SUDO}_BACKGROUND=0
   # Default context color (no privileges, no SSH).
   typeset -g POWERLEVEL9K_CONTEXT_FOREGROUND=0
-  typeset -g POWERLEVEL9K_CONTEXT_BACKGROUND=218
+  typeset -g POWERLEVEL9K_CONTEXT_BACKGROUND='#bf616a'
 
   # Context format when running with privileges: user@hostname.
   typeset -g POWERLEVEL9K_CONTEXT_ROOT_TEMPLATE='%n@%m'
@@ -1725,7 +1725,7 @@
   typeset -g POWERLEVEL9K_BATTERY_STAGES='\UF008E\UF007A\UF007B\UF007C\UF007D\UF007E\UF007F\UF0080\UF0081\UF0082\UF0079'
   # Don't show the remaining time to charge/discharge.
   typeset -g POWERLEVEL9K_BATTERY_VERBOSE=false
-  typeset -g POWERLEVEL9K_BATTERY_BACKGROUND=218
+  typeset -g POWERLEVEL9K_BATTERY_BACKGROUND='#bf616a'
 
   #####################################[ wifi: wifi speed ]#####################################
   # WiFi color.
@@ -1757,7 +1757,7 @@
   ####################################[ time: current time ]####################################
   # Current time color.
   typeset -g POWERLEVEL9K_TIME_FOREGROUND=0
-  typeset -g POWERLEVEL9K_TIME_BACKGROUND=218
+  typeset -g POWERLEVEL9K_TIME_BACKGROUND='#bf616a'
   # Format for the current time: 09:51:02. See `man 3 strftime`.
   typeset -g POWERLEVEL9K_TIME_FORMAT='%D{%H:%M:%S}'
   # If set to true, time will update when you hit enter. This way prompts for the past

@@ -3,6 +3,7 @@
   home.file = {
     ".config/fastfetch".source = ../config/fastfetch;
     ".config/kitty/kitty.conf".source = ../config/kitty/kitty.conf;
+    ".config/kitty/current-theme.conf".source = ../config/kitty/current-theme.conf;
     ".config/nnn/bookmarks".source = ../config/nnn/bookmarks;
     ".config/nnn/plugins".source = ../config/nnn/plugins;
     ".config/spotatui/config.yml".source = ../config/spotatui/config.yml;
