@@ -62,9 +62,7 @@ nixos/
     └── plasma/
         ├── appletsrc.backup   # Panel layout (restored manually)
         ├── assets/            # Launcher button icon
-        ├── aurorae/           # Window decoration: Sweet-Dark-transparent
         ├── color-schemes/     # Catppuccin Mocha Mauve
-        ├── desktoptheme/      # Plasma style: Sweet
         ├── plasmoids/         # Third-party widgets
         └── wallpapers/        # Video wallpaper plugin
 ```
@@ -182,14 +180,14 @@ cp ~/nixos/config/plasma/appletsrc.backup \
    ~/.config/plasma-org.kde.plasma.desktop-appletsrc
 ```
 
-The Plasma style (Sweet), window decoration (Sweet-Dark-transparent), color
-scheme (Catppuccin Mocha Mauve) and third-party widgets are vendored in
+The Plasma style and window decoration are stock Breeze. The color scheme
+(Catppuccin Mocha Mauve) and third-party widgets are vendored in
 `config/plasma/`; the cursors come from nixpkgs. All of them are declared in
 `home/plasma.nix` and apply automatically.
 
-The icon theme is the exception: **Relax-Light-Icons** (61 MB, by
-[L4ki](https://github.com/L4ki/Relax-Plasma-Themes)) is not in the repo yet.
-Install it from System Settings → Icons → *Get New…*.
+The icon theme is the exception: **Hatter-kde-dark** (by
+[Mibea](https://github.com/Mibea/Hatter)) is not packaged. Install it from
+System Settings → Icons → *Get New…*.
 
 Never apply a **Global Theme** afterwards: it overwrites icons, colors, style
 and decoration in one go.
@@ -251,7 +249,7 @@ falls back to a plain background.
 | Spotify OAuth | Token expires every 6 months |
 | Nextcloud login | Autostart is declared, but the client needs a one-time sign-in |
 | Wallpapers | Live in cloud storage, too large to vendor |
-| Relax-Light-Icons | Installed from the KDE Store, not packaged yet |
+| Hatter icons | Installed from the KDE Store, not packaged |
 | `/etc/nixos` link | Installer creates a real directory; replace it with a link to the flake |
 | Alpaca instance | Ollama (External) at `127.0.0.1:11434`, set in the app |
 | `virsh net-start default` | libvirt's default network isn't auto-started |

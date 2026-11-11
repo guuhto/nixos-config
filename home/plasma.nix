@@ -28,11 +28,11 @@
     workspace = {
       colorScheme = "CatppuccinMochaMauve";
       cursor.theme = "catppuccin-mocha-mauve-cursors";
-      iconTheme = "Relax-Light-Icons";
-      theme = "Sweet";
+      iconTheme = "Hatter-kde-dark";
+      theme = "default";
       windowDecorations = {
-        library = "org.kde.kwin.aurorae";
-        theme = "__aurorae__svg__Sweet-Dark-transparent";
+        library = "org.kde.breeze";
+        theme = "Breeze";
       };
     };
   };
