@@ -12,7 +12,6 @@
     ".config/nnn/plugins".source = ../config/nnn/plugins;
     ".config/spotatui/config.yml".source = ../config/spotatui/config.yml;
     ".local/share/color-schemes/CatppuccinMochaMauve.colors".source = ../config/plasma/color-schemes/CatppuccinMochaMauve.colors;
-    ".local/share/color-schemes/NordCoral.colors".source = ../config/plasma/color-schemes/NordCoral.colors;
     ".local/share/plasma/plasmoids".source = ../config/plasma/plasmoids;
     ".local/share/plasma/wallpapers".source = ../config/plasma/wallpapers;
     ".p10k.zsh".source = ../config/p10k.zsh;
